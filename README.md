@@ -1,30 +1,46 @@
-# hello-express
+TensorFlow.js Front End with Node backend Boilerplate
+=================
 
-A server that serves a webpage, its resources, and some data
+This very simple skeleton simply loads in TensorFlow.js and prints out the version once loaded to the DOM.
 
+From these humble beginnings you can do some really great things. 
 
-## Your Project
-
-On the front-end,
-
-- Edit `views/index.html` to change the content of the webpage
-- `public/client.js` is the javacript that runs when you load the webpage
-- `public/style.css` is the styles for `views/index.html`
-- Drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy.
+Feel free to fork this and use it as a quick way to start coding with TensorFlow.js directly or following some other tutorial that needs TensorFlow.js to run.
 
 
-## Made by [Glitch](https://glitch.com/)
+Your Project
+------------
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+### ← www/index.html
 
-Find out more [about Glitch](https://glitch.com/about).
+We simply have a script tag in our HTML to grab the latest version of TensorFlow.js
 
-( ᵔ ᴥ ᵔ )
+In this case we simply reference the following:
+
+```HTML
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+```
+
+However, if you want to pull in a particular version of TensorFlow.js you can do so like this:
+
+```HTML
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.4.0/dist/tf.min.js" type="text/javascript"></script>
+```
+
+Optionally, if you want to include our TF.js visualization library you can do so using this import:
+
+```HTML
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis/dist/tfjs-vis.umd.min.js" type="text/javascript"></script>
+```
+However feel free to remove if you are not using this for visualizing training etc. [More details here](https://github.com/tensorflow/tfjs/tree/master/tfjs-vis).
+
+### ← www/style.css
+
+Nothing to see here. Just styles to make the demo look prettier. You can use or ignore these as you please.
+
+### ← www/script.js
+
+This simply grabs a reference to a paragraph in the DOM and then prints out the TensorFlow.js version number to it once loaded.
+
+
+-------------------
